@@ -4,6 +4,7 @@ import { auth } from '../firebase/config';
 import HomeView from '../views/HomeView.vue';
 import ChatView from '../views/ChatView.vue';
 import LoginView from '../views/LoginView.vue';
+import CreateRoom from '../components/CreateRoom.vue';
 
 const routes = [
     {
@@ -21,6 +22,12 @@ const routes = [
         meta: {
             requiresAuth: true
         }
+    },
+    {
+        path: '/create-room',
+        name: 'createRoom',
+        component: CreateRoom,
+        meta: { requiresAuth: true }
     },
     {
         path: '/login',
